@@ -5,6 +5,7 @@ Write a SQL query to find the cancellation rate of requests with unbanned users 
 The cancellation rate is computed by dividing the number of canceled (by client or driver) requests with unbanned users by the total number of requests with unbanned users on that day.
 
 Trips:
+```
 +-------------+----------+
 | Column Name | Type     |
 +-------------+----------+
@@ -15,11 +16,13 @@ Trips:
 | Status      | enum     |
 | Request_at  | date     |     
 +-------------+----------+
+```
 Id is the primary key for this table.
 The table holds all taxi trips. Each trip has a unique Id, while Client_Id and Driver_Id are foreign keys to the Users_Id at the Users table.
 Status is an ENUM type of (‘completed’, ‘cancelled_by_driver’, ‘cancelled_by_client’).
 
 Users:
+```
 +-------------+----------+
 | Column Name | Type     |
 +-------------+----------+
@@ -27,6 +30,7 @@ Users:
 | Banned      | enum     |
 | Role        | enum     |
 +-------------+----------+
+```
 Users_Id is the primary key for this table.
 The table holds all users. Each user has a unique Users_Id, and Role is an ENUM type of (‘client’, ‘driver’, ‘partner’).
 Status is an ENUM type of (‘Yes’, ‘No’).
