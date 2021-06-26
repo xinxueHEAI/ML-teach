@@ -30,9 +30,8 @@ class OLS:
             X = (X - X_mean)/X_sd
         return X
         
-    def _gd(gradient):
-        def wrapped(self, *args, **kwargs):
-            gradients
+    def _gd(gradient, lr):
+        def wrapped(self, lr=lr):
             
         
         
