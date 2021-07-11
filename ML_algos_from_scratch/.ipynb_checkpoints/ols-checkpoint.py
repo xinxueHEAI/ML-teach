@@ -49,6 +49,8 @@ class OLS:
         new_w = 
         while
         
-            
+class LASSO(OLS):
+    None
+
         
         

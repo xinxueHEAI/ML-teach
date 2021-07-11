@@ -1,10 +1,12 @@
 import numpy as np
 
 class KMeans:
+    '''KMeans clustering algorithm for unsupervised learning'''
     def __init__(self, K):
         self.K = K
 
     def reset_K(self, K):
+        '''Reset the number of clusters to K'''
         self.K = K
 
     def initiate_centroids(self, X: np.array):
@@ -64,3 +66,5 @@ class KMeans:
             new_cent, clusters = self.pip(cent, X, dtype = 'd')
             converged = self.convergence(new_cent, cent)
         return new_cent, clusters
+    
+if __name__=='__main__':
